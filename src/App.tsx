@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import HomePage from './pages/home/Home'
+import HomePage from './pages/home/HomePage'
 import Layout from './pages/layout/Layout'
+import ResultsPage from './pages/results/ResultsPage'
 
 function App() {
 	return (
@@ -9,12 +10,8 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Layout />}>
 					<Route index element={<HomePage />} />
-					{/* <Route path='movie/:movieId' element={<CardPage />} />
-					<Route path='top' element={<TopPage />} />
-					<Route path='upcoming' element={<UpcomingPage />} /> */}
+					<Route path='results/:query' element={<ResultsPage />} />
 				</Route>
-
-				<Route path='/dashboard'></Route>
 			</Routes>
 		</BrowserRouter>
 	)
