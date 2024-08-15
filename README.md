@@ -1,5 +1,5 @@
 <h1> Тестовое задание NorthIS </h1>
-![Preview](https://imgur.com/a/hwgUDg4)
+![Showcase Banner](https://imgur.com/a/hwgUDg4)
 
 <h2> Запус приложения </h2>
 
