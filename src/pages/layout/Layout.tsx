@@ -7,6 +7,7 @@ const Layout = () => {
 		<div className={styles.layout}>
 			<Header />
 			<Outlet />
+			<div className={styles.footer}></div>
 		</div>
 	)
 }
