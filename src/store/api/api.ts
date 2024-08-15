@@ -2,12 +2,14 @@ import { createApi } from '@reduxjs/toolkit/query/react'
 import { graphqlRequestBaseQuery } from '@rtk-query/graphql-request-base-query'
 import { GraphQLClient } from 'graphql-request'
 import { gql } from 'graphql-tag'
-import { GITHUB_TOKEN } from '../../constants/api'
 
 const API_URL = 'https://api.github.com/graphql'
 
 export const client = new GraphQLClient(API_URL)
-client.setHeader('Authorization', `Bearer ${GITHUB_TOKEN}`)
+client.setHeader(
+	'Authorization',
+	`Bearer ${process.env.REACT_APP_GITHUB_API_KEY}`
+)
 
 // GraphQL запрос для поиска репозитория
 const GET_REPOS_QUERY = gql`
