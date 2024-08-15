@@ -27,6 +27,7 @@ const ResultsPage = () => {
 	})
 	const [selectedRow, setSelectedRow] = useState<ISelectedRow>()
 
+	
 	const columns: GridSingleSelectColDef[] = [
 		{ field: 'name', type: 'singleSelect', headerName: 'Название', width: 180 },
 		{
